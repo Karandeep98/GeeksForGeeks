@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1580024266 source:f:\geeksforgeeks\004(trappingrainwater)\main.cpp
+	<iostream>
+	<algorithm>
+

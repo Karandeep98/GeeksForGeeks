@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1580015577 source:f:\geeksforgeeks\003(kthsmallestelement)\main.cpp
+	<iostream>
+	<algorithm>
+
