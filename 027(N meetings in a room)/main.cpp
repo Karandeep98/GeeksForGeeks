@@ -14,7 +14,7 @@ int main()
 	cin>>t;
 	while(t--){
 	    cin>>n;
-	    struct meeting meet[n];
+	     meeting meet[n];
 	    for(int i=0;i<n;i++){
 	        cin>>meet[i].start;
 	    }
