@@ -6,7 +6,13 @@ using namespace std;
 int main()
 {
    vector<int> v{14, 5, 14, 34, 42, 63, 17, 25, 39, 61, 97, 55, 33, 96, 62, 32, 98, 77, 35};
-   int b;
+   int n=v.size();
+   sort(v.begin(),v.end());
+   for(int i=0;i<n;i++){
+    cout<<v[i]<<" ";
+   }
+
+   /*int b;
    cin>>b;
    while(b>v.size()){
     b-=v.size();
@@ -21,6 +27,6 @@ int main()
 	reverse(v.begin(),v.end());
 	for(int i=0;i<v.size();i++){
         cout<<v[i]<<" ";
-	}
+	}*/
     return 0;
 }
