@@ -22,19 +22,19 @@ int main()
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    for(int i=0;i<f;i++){
-        a[i]=v[i];
-    }
-    if(n>=f) pagefault=f;
-    else pagefault=n;
-    int oldest=0;
-    for(int i=f;i<n;i++){
-        if(!check(v[i],a,f)){
 
-            a[oldest]=v[i];
-            pagefault++;
-            if(oldest==f-1) oldest=0;
-            else oldest++;
+    int oldest=0;
+    for(int i=0;i<n;i++){
+        if(!check(v[i],a,min(f,i))){
+           if(i>=f){
+                a[oldest]=v[i];
+
+                if(oldest==f-1) oldest=0;
+                else oldest++;
+           }
+            else a[i]=v[i];
+
+        pagefault++;
         }
         else pagehit++;
     }
