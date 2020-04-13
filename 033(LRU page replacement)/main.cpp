@@ -36,27 +36,26 @@ int main()
     int v[n];
     int a[f];
     int lru[f];
-    for(int i=0;i<f;i++){
-        lru[i]=i;
-    }
+
     int pagefault=0;
     int pagehit=0;
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    for(int i=0;i<f;i++){
-        a[i]=v[i];
-    }
-    if(n>=f) pagefault=f;
-    else pagefault=n;
 
-    for(int i=f;i<n;i++){
-        if(!check(v[i],a,f)){
-        int min=mini(lru,f);
-            a[min]=v[i];
-            lru[min]=i;
-            pagefault++;
+    for(int i=0;i<n;i++){
+        if(!check(v[i],a,min(i,f))){
+            if(i>=f){
+                int min=mini(lru,f);
+                a[min]=v[i];
+                lru[min]=i;
 
+            }
+            else {
+                    a[i]=v[i];
+                    lru[i]=i;
+            }
+             pagefault++;
         }
         else {
                 pagehit++;
