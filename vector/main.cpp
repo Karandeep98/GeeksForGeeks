@@ -12,6 +12,7 @@ int main()
     cout<<v[i]<<" ";
    }
 
+
    /*int b;
    cin>>b;
    while(b>v.size()){
