@@ -1,7 +1,4 @@
-#include <iostream>
-#include<algorithm>
-#include<vector>
-#include<numeric>
+#include<bits/stdc++.h>
 
 using namespace std;
 
@@ -13,6 +10,7 @@ int main()
    for(int i=0;i<n;i++){
     cout<<ar[i]<<"  ";
    }
+
    vector<int> v(ar,ar+n);
    cout<<*max_element(v.begin(),v.end())<<accumulate(v.begin(),v.end(),0)<<endl;
    cout<<count(v.begin(),v.end(),61);
