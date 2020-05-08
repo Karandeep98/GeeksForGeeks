@@ -1,5 +1,4 @@
-#include <iostream>
-#include<algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -20,7 +19,5 @@ int main()
         cout<<A[k-1]<<endl;
          t--;
     }
-
-
     return 0;
 }
