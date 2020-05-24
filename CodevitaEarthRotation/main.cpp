@@ -11,7 +11,7 @@ int main()
     cin>>longitude;
     float time = (period_Of_Earths_Rotation/360)*longitude;
 
-    int hour=time;
+    int hour=floor(time);
     float decimal=time-hour;
     float minutes=decimal*60;
     //cout<<hour<<":"<<minutes;

@@ -52,15 +52,35 @@ int main()
     vector<int> pr{212, 417, 112, 426};
     vector<int> loc(pr.size(),-1);
 
-    //firstfit(mem,pr,loc);
-    //bestfit(mem,pr,loc);
-    worstfit(mem,pr,loc);
+    firstfit(mem,pr,loc);
 
+    cout<<"FirstFit\n";
     cout<<"Process number\t Process size \tAllocated Block No.";
     for(int i=0;i<pr.size();i++){
         cout<<"\n\t"<<i+1<<"\t\t"<<pr[i]<<"\t\t";
         if(loc[i]==-1) cout<<"Not Allocated";
         else cout<<loc[i];
     }
+
+    bestfit(mem,pr,loc);
+
+    cout<<"\nBestFit\n";
+    cout<<"Process number\t Process size \tAllocated Block No.";
+    for(int i=0;i<pr.size();i++){
+        cout<<"\n\t"<<i+1<<"\t\t"<<pr[i]<<"\t\t";
+        if(loc[i]==-1) cout<<"Not Allocated";
+        else cout<<loc[i];
+    }
+
+    worstfit(mem,pr,loc);
+
+    cout<<"\nWorstFit\n";
+    cout<<"Process number\t Process size \tAllocated Block No.";
+    for(int i=0;i<pr.size();i++){
+        cout<<"\n\t"<<i+1<<"\t\t"<<pr[i]<<"\t\t";
+        if(loc[i]==-1) cout<<"Not Allocated";
+        else cout<<loc[i];
+    }
+
    return 0;
 }
