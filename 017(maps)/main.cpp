@@ -7,6 +7,6 @@ int main()
   unordered_map<int,bool> mp;
   mp[0]=true;
   mp[2]=true;
-  cout<<mp[0]<<mp[1]<<mp[]
+  cout<<mp[0]<<mp[1]<<mp[2];
     return 0;
 }
